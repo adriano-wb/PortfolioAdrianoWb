@@ -43,7 +43,7 @@
 			}
 			
 			.w3-height-850 {
-				height: 850px;
+				height: 100vh;
 			}
 			
 			.w3-section-container {
@@ -64,14 +64,29 @@
 			}
 			
 			.w3-parallax {
-				background: url("img/parallax1.png") 0 0 / cover no-repeat;
-				height: 290px;
+				background: url("img/parallax1.png") 0 -610px / cover no-repeat;
+				height: 410px;
+			}
+			
+			.w3-container-item {
+				margin: 0 auto;
+				width: 1410px;
 			}
 			
 			@media only screen and (max-width: 600px) {
-				.w3-section-container {
+				.w3-section-container,
+				.w3-container-item {
 					width: 100%;
 					margin: 0;
+				}
+				
+				.w3-office-foto, .w3-magiccub-foto {
+					background-position: -300px 0;
+				}
+				
+				.w3-parallax {
+					background-position: 0;
+					height: 210px;
 				}
 			}
 		</style>
@@ -138,8 +153,8 @@
 					<div class="w3-section-container w3-padding">
 						<h2 class="w3-center">Informações de cursos que fiz</h2>
 						<div class="w3-responsive">
-							<table class="w3-table">
-								<tr>
+							<table class="w3-table w3-table-striped w3-bordered w3-light-grey">
+								<tr class="w3-win8-blue">
 									<th>Curso</th>
 									<th>Assunto</th>
 									<th>Tempo</th>
@@ -159,8 +174,10 @@
 					</div>
 				</section>
 			</section>
-			<section class="w3-container w3-win8-blue">
-				<h2 class="w3-center">Portfólio</h2>
+			<section class="w3-container w3-win8-blue w3-padding-vertical">
+				<div class="w3-padding w3-container-item">
+					<h2 class="w3-center">Portfólio</h2>
+				</div>
 			</section>
 			<footer class="w3-container w3-center w3-win8-magenta">
 				<p class="w3-small">&copy; Todos os Direitos Reservados - Adriano_wb</p>
