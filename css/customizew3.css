@@ -90,13 +90,17 @@
 	background: url("../img/home-office-2452806_1280.svg") -350px 0 / cover no-repeat;
 }
 
+.w3-autor-foto {
+	background: url("../img/autor2.svg") -3px -500px / cover no-repeat;
+}
+
 .w3-parallax {
 	background: url("../img/home-office-2452806_1280.jpg") 0 0 / cover no-repeat;
 	height: 210px;
 }
 
 .w3-parallax2 {
-	background: url("../img/programming-gee3bff00d_1280.jpg") 0 0 / cover no-repeat;
+	background: url("../img/parallax1.png") 0 0 / cover no-repeat;
 	height: 210px;
 }
 
