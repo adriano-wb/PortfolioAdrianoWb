@@ -59,18 +59,37 @@
 				background: url("img/home-office-2452806_1280.svg") 0 -50px / cover no-repeat;
 			}
 			
-			.w3-magiccub-foto {
-				background: url("img/magic-cube-1976725_1280.svg") 0 -50px / cover no-repeat;
-			}
-			
 			.w3-parallax {
 				background: url("img/home-office-2452806_1280.jpg") 0 -310px / cover no-repeat;
+				height: 410px;
+			}
+			
+			.w3-parallax2 {
+				background: url("img/programming-gee3bff00d_1280.jpg") 0 -310px / cover no-repeat;
 				height: 410px;
 			}
 			
 			.w3-container-item {
 				margin: 0 auto;
 				width: 1410px;
+			}
+			
+			.anim-arrow {
+				animation: upBottom 1s infinite;
+			}
+			
+			@keyframes upBottom {
+				0% {
+					bottom: 150px;
+				}
+				
+				50% {
+					bottom: 115px;
+				}
+				
+				100% {
+					bottom: 150px;
+				}
 			}
 			
 			@media only screen and (max-width: 600px) {
@@ -80,11 +99,15 @@
 					margin: 0;
 				}
 				
+				.seta {
+					display: none;
+				}
+				
 				.w3-office-foto, .w3-magiccub-foto {
 					background-position: -300px 0;
 				}
 				
-				.w3-parallax {
+				.w3-parallax, .w3-parallax2 {
 					background-position: 0;
 					height: 210px;
 				}
@@ -108,19 +131,20 @@
 					</div>
 				</nav>	
 			</header>
-			<div class="w3-win8-blue w3-display-flex w3-flex-center w3-height-850 w3-office-foto">
+			<div class="w3-win8-cobalt w3-display-flex w3-display-container w3-flex-center w3-height-850 w3-office-foto">
 				<div class="w3-center">
 					<img src="img/autor.svg" class="w3-circle w3-img-correctly w3-margin-top" style="width: 240px;height: 240px" alt="Foto do autor do site Adriano José.">
 					<h1 class="w3-xxxlarge w3-serif">Adriano José</h1>
 					<p class="w3-large w3-serif" style="margin-top:-10px">Desenvolvedor web front-end.</p>
 					<button type="button" class="w3-button w3-win8-cyan w3-ripple">Contrate-me</button>
 					<button type="button" class="w3-button w3-win8-emerald w3-ripple">Currículo</button>
+					<span class="w3-circle seta anim-arrow w3-win8-blue w3-padding w3-display-bottomright w3-xlarge" style="right:85px;bottom:115px;box-shadow:1px 1px 7px #0003"><i class="fa-solid fa-arrow-down"></i></span>
 				</div>
 			</div>
 			<div class="w3-container w3-parallax">
 			
 			</div>
-			<section id="sobre" class="w3-container w3-win8-indigo w3-padding-vertical w3-magiccub-foto">
+			<section id="sobre" class="w3-container w3-win8-blue w3-padding-vertical w3-magiccub-foto">
 				<div class="w3-section-container w3-center w3-padding">
 					<h2 class="">Sobre Mim</h2>
 					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
@@ -129,33 +153,30 @@
 					<div class="w3-section-container w3-padding">
 						<h2 class="w3-center">Minhas Habilidades</h2>
 						<div class="w3-cell-row">
-							<div class="w3-cell w3-mobile w3-xlarge">
-								HTML5 <i class="fa-brands fa-html5"></i>
+							<div class="w3-cell w3-center w3-win8-orange w3-mobile w3-jumbo">
+								HTML5
 							</div>
-							<div class="w3-cell w3-mobile w3-xlarge">
-								CSS3 <i class="fa-brands fa-css3-alt"></i> <span style="color:#F22">*</span>
+							<div class="w3-cell w3-center w3-win8-green w3-mobile w3-jumbo">
+								CSS3
 							</div>
-							<div class="w3-cell w3-mobile w3-xlarge">
-								Bootstrap 5 <i class="fa-brands fa-bootstrap"></i>
+							<div class="w3-cell w3-center w3-mobile w3-jumbo w3-win8-magenta">
+								BS5
 							</div>
-							<div class="w3-cell w3-mobile w3-xlarge">
-								JavaScript <i class="fa-brands fa-js"></i> <span style="color:#F22">*</span>
-							</div>
-							<div class="w3-cell w3-mobile w3-xlarge">
-								jQuery
+							<div class="w3-cell w3-center w3-mobile w3-jumbo w3-win8-yellow">
+								JS
 							</div>
 						</div>
-						<p><span style="color:#F22">*</span> Não contei com a linguagem de pré-processamento SASS que aprimora o jeito de escrita em CSS e facilita no desenvolvimento.</p>
-						<p><span style="color:#F22">*</span> Há conhecimentos em APIs, e frameworks como o Angular JS.</p>
+						<p><b>Obs</b>: Não contei com a linguagem de pré-processamento SASS que aprimora o jeito de escrita em CSS e facilita no desenvolvimento.</p>
+						<p><b>Obs²</b>: Há conhecimentos em APIs, e frameworks como o Angular JS.</p>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in tristique nunc. Donec tortor lectus, sollicitudin in volutpat congue, posuere ac turpis.</p>
 					</div>
 				</section>
 				<section>
 					<div class="w3-section-container w3-padding">
-						<h2 class="w3-center">Informações de cursos que fiz</h2>
+						<h2 class="w3-center">Informações de aprendizado</h2>
 						<div class="w3-responsive">
-							<table class="w3-table">
-								<tr>
+							<table class="w3-table w3-win8-cyan w3-table-striped">
+								<tr class="w3-black">
 									<th>Curso</th>
 									<th>Assunto</th>
 									<th>Tempo</th>
@@ -172,10 +193,17 @@
 								</tr>
 							</table>
 						</div>
+						<section class="w3-section">
+							<h2 class="w3-center">Informações de experiência</h2>
+							<p>No momento sou um estudante em evolução, estou seguindo em Análise e Desenvolvimento de Sistemas buscando um encaixe .</p>
+						</section>
 					</div>
 				</section>
 			</section>
-			<section class="w3-container w3-win8-blue w3-padding-vertical">
+			<div class="w3-container w3-parallax2">
+			
+			</div>
+			<section class="w3-container w3-win8-cobalt w3-padding-vertical">
 				<div class="w3-padding w3-container-item">
 					<h2 class="w3-center">Portfólio</h2>
 				</div>
