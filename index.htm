@@ -1,135 +1,43 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 	<head>
-		<title></title>
+		<title>Adriano José Portfólio</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 		<link rel="stylesheet" href="css/w3-colors-win8.css">
-		<style>
-			@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@300&family=Open+Sans&display=swap');
-			
-			.w3-bar-item {
-				/* font-family: 'Geologica', sans-serif; */
-				font-family: 'open sans', sans-serif;
-				transition: 0.2s;
-				text-transform: uppercase;
-				letter-spacing: 0.05rem;
-				font-size: 1.2rem;
-			}
-			
-			.w3-social-midia {
-				display: flex;
-				justify-content: center;
-				float: right;
-				@media screen and (max-width: 600px) {
-					width: 100%;
-				}
-			}
-			
-			.w3-img-correctly {
-				object-fit: cover;
-				object-position: 0 -20px;
-				filter: saturate(120%);
-			}
-			
-			.w3-display-flex {
-				display: flex;
-			}
-			
-			.w3-flex-center {
-				align-items: center;
-				justify-content: center;
-			}
-			
-			.w3-height-850 {
-				height: 100vh;
-			}
-			
-			.w3-section-container {
-				width: 850px;
-				margin: 0 auto;
-			}
-			
-			.w3-padding-vertical {
-				padding: 100px 0;
-			}
-			
-			.w3-office-foto {
-				background: url("img/home-office-2452806_1280.svg") 0 -50px / cover no-repeat;
-			}
-			
-			.w3-parallax {
-				background: url("img/home-office-2452806_1280.jpg") 0 -310px / cover no-repeat;
-				height: 410px;
-			}
-			
-			.w3-parallax2 {
-				background: url("img/programming-gee3bff00d_1280.jpg") 0 -310px / cover no-repeat;
-				height: 410px;
-			}
-			
-			.w3-container-item {
-				margin: 0 auto;
-				width: 1410px;
-			}
-			
-			.anim-arrow {
-				animation: upBottom 1s infinite;
-			}
-			
-			@keyframes upBottom {
-				0% {
-					bottom: 150px;
-				}
-				
-				50% {
-					bottom: 115px;
-				}
-				
-				100% {
-					bottom: 150px;
-				}
-			}
-			
-			@media only screen and (max-width: 600px) {
-				.w3-section-container,
-				.w3-container-item {
-					width: 100%;
-					margin: 0;
-				}
-				
-				.seta {
-					display: none;
-				}
-				
-				.w3-office-foto, .w3-magiccub-foto {
-					background-position: -300px 0;
-				}
-				
-				.w3-parallax, .w3-parallax2 {
-					background-position: 0;
-					height: 210px;
-				}
-			}
-		</style>
+		<link rel="stylesheet" href="css/customizew3.css">
 		<script src="https://kit.fontawesome.com/f492772e4b.js" crossorigin="anonymous"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 	</head>
 	<body class="w3-animate-opacity">
 		<main>
 			<header id="inicio">
-				<nav class="w3-bar w3-win8-cobalt">
-					<a href="#inicio" role="button" aria-current="page" class="w3-bar-item w3-button w3-mobile w3-win8-cyan">Home</a>
-					<a href="#sobre" role="button" class="w3-bar-item w3-button w3-mobile">Sobre Mim</a>
-					<a href="#" role="button" class="w3-bar-item w3-button w3-mobile">Portfolio</a>
-					<a href="#" role="button" class="w3-bar-item w3-button w3-mobile">Contato</a>
-					<div class="w3-social-midia" aria-label="Links de navegação para mídia social">
-						<a href="#" class="w3-bar-item w3-button"><i class="fa-brands fa-github"></i></a>
-						<a href="#" class="w3-bar-item w3-button"><i class="fa-brands fa-facebook"></i></a>
-						<a href="#" class="w3-bar-item w3-button"><i class="fa-brands fa-telegram"></i></a>
-						<a href="#" class="w3-bar-item w3-button"><i class="fa-brands fa-whatsapp"></i></a>
+				
+				<!---------------------------------- MENU PRINCIPAL -------------------------------------->
+				<nav class="w3-bar w3-win8-cobalt w3-display-fixed">
+					<a href="#inicio" role="button" aria-current="page" class="w3-bar-item atual w3-button w3-mobile w3-win8-cyan">Home</a>
+					<div class="w3-animate-top" id="itemsOcultos">
+						<a href="#sobre" role="button" class="w3-bar-item w3-button w3-mobile">Sobre Mim</a>
+						<a href="#" role="button" class="w3-bar-item w3-button w3-mobile">Portfolio</a>
+						<a href="#" role="button" class="w3-bar-item w3-button w3-mobile">Contato</a>
+						
+						<!------------------ REDES SOCIAIS ----------------------->
+						<div class="w3-social-midia" aria-label="Links de navegação para mídia social">
+							<a href="#" class="w3-bar-item w3-button"><i class="fa-brands fa-github"></i></a>
+							<a href="#" class="w3-bar-item w3-button"><i class="fa-brands fa-facebook"></i></a>
+							<a href="#" class="w3-bar-item w3-button"><i class="fa-brands fa-telegram"></i></a>
+							<a href="#" class="w3-bar-item w3-button"><i class="fa-brands fa-whatsapp"></i></a>
+						</div>
 					</div>
+					
+					<!----------------- BOTÃO PARA ABRIR E FECHAR O MENU ---------------->
+					<button type="button" class="w3-button w3-bar-item botao w3-win8-steel w3-display-topright">
+						<i class="fa-solid fa-bars icon-botao-menu"></i>
+					</button>
 				</nav>	
+				<!------------------------------------ FIM MENU ----------------------------------->
+				
 			</header>
 			<div class="w3-win8-cobalt w3-display-flex w3-display-container w3-flex-center w3-height-850 w3-office-foto">
 				<div class="w3-center">
@@ -137,14 +45,14 @@
 					<h1 class="w3-xxxlarge w3-serif">Adriano José</h1>
 					<p class="w3-large w3-serif" style="margin-top:-10px">Desenvolvedor web front-end.</p>
 					<button type="button" class="w3-button w3-win8-cyan w3-ripple">Contrate-me</button>
-					<button type="button" class="w3-button w3-win8-emerald w3-ripple">Currículo</button>
+					<button type="button" class="w3-button w3-win8-green w3-ripple">Currículo</button>
 					<span class="w3-circle seta anim-arrow w3-win8-blue w3-padding w3-display-bottomright w3-xlarge" style="right:85px;bottom:115px;box-shadow:1px 1px 7px #0003"><i class="fa-solid fa-arrow-down"></i></span>
 				</div>
 			</div>
 			<div class="w3-container w3-parallax">
 			
 			</div>
-			<section id="sobre" class="w3-container w3-win8-blue w3-padding-vertical w3-magiccub-foto">
+			<section id="sobre" class="w3-container w3-win8-indigo w3-padding-vertical w3-magiccub-foto">
 				<div class="w3-section-container w3-center w3-padding">
 					<h2 class="">Sobre Mim</h2>
 					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
@@ -153,17 +61,23 @@
 					<div class="w3-section-container w3-padding">
 						<h2 class="w3-center">Minhas Habilidades</h2>
 						<div class="w3-cell-row">
-							<div class="w3-cell w3-center w3-win8-orange w3-mobile w3-jumbo">
-								HTML5
+							<div class="w3-cell w3-center w3-mobile w3-jumbo">
+								<img src="img/html-5.png" style="width:85px;height:85px;" title="HTML5" alt="Linguagem de marcação HTML5">
 							</div>
-							<div class="w3-cell w3-center w3-win8-green w3-mobile w3-jumbo">
-								CSS3
+							<div class="w3-cell w3-center w3-mobile w3-jumbo">
+								<img src="img/css-3.png" style="width:85px;height:85px;" title="CSS3" alt="Linguagem de folha de estilo CSS">
 							</div>
-							<div class="w3-cell w3-center w3-mobile w3-jumbo w3-win8-magenta">
-								BS5
+							<div class="w3-cell w3-center w3-mobile w3-jumbo">
+								<img src="img/js.png" style="width:85px;height:85px;" title="JavaScript" alt="Linguagem de programação JavaScript">
 							</div>
-							<div class="w3-cell w3-center w3-mobile w3-jumbo w3-win8-yellow">
-								JS
+							<div class="w3-cell w3-center w3-mobile w3-jumbo">
+								<img src="img/bootstrap.png" style="width:85px;height:85px;" title="Bootstrap 5" alt="Framework Bootstrap 5">
+							</div>
+							<div class="w3-cell w3-center w3-mobile w3-jumbo">
+								<img src="img/sass.png" style="width:85px;height:85px;" title="SASS" alt="Linguagem de pré-processamento CSS, SASS">
+							</div>
+							<div class="w3-cell w3-center w3-mobile w3-jumbo">
+								<img src="img/jquery.png" style="width:85px;height:85px;" title="jQuery" alt="Biblioteca JavaScript, jQuery">
 							</div>
 						</div>
 						<p><b>Obs</b>: Não contei com a linguagem de pré-processamento SASS que aprimora o jeito de escrita em CSS e facilita no desenvolvimento.</p>
@@ -212,5 +126,15 @@
 				<p class="w3-small">&copy; Todos os Direitos Reservados - Adriano_wb</p>
 			</footer>
 		</main>
+		
+		<script>
+			$(() => {
+				$(".botao").on("click", () => {
+					$("#itemsOcultos").toggle();
+					$(".icon-botao-menu").toggleClass("fa-bars").toggleClass("fa-xmark");
+					$(".botao").toggleClass("w3-win8-steel").toggleClass("w3-win8-crimson");
+				});
+			})
+		</script>
 	</body>
 </html>
