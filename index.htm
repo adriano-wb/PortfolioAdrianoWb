@@ -16,11 +16,11 @@
 				
 				<!---------------------------------- MENU PRINCIPAL -------------------------------------->
 				<nav class="w3-bar w3-win8-cobalt w3-display-fixed">
-					<a href="#inicio" role="button" aria-current="page" class="w3-bar-item atual w3-button w3-mobile w3-win8-cyan">Home</a>
+					<a href="#inicio" role="button" aria-current="page" class="w3-bar-item atual w3-links-js w3-button w3-mobile">Home</a>
 					<div class="w3-animate-top" id="itemsOcultos">
-						<a href="#sobre" role="button" class="w3-bar-item w3-button w3-mobile">Sobre Mim</a>
-						<a href="#" role="button" class="w3-bar-item w3-button w3-mobile">Portfolio</a>
-						<a href="#" role="button" class="w3-bar-item w3-button w3-mobile">Contato</a>
+						<a href="#sobre" role="button" class="w3-bar-item w3-links-js w3-button w3-mobile">Sobre Mim</a>
+						<a href="#portfolio" role="button" class="w3-bar-item w3-links-js w3-button w3-mobile">Portfolio</a>
+						<a href="#" role="button" class="w3-bar-item w3-button w3-links-js w3-mobile">Contato</a>
 						
 						<!------------------ REDES SOCIAIS ----------------------->
 						<div class="w3-social-midia" aria-label="Links de navegação para mídia social">
@@ -117,7 +117,7 @@
 			<div class="w3-container w3-parallax2">
 			
 			</div>
-			<section class="w3-container w3-win8-cobalt w3-padding-vertical">
+			<section id="portfolio" class="w3-container w3-win8-cobalt w3-padding-vertical">
 				<div class="w3-padding w3-container-item">
 					<h2 class="w3-center">Portfólio</h2>
 					<p class="w3-container">Veja algumas de minhas criações, projetos simples e interativos:</p>
@@ -186,6 +186,19 @@
 					$("#itemsOcultos").toggle();
 					$(".icon-botao-menu").toggleClass("fa-bars").toggleClass("fa-xmark");
 					$(".botao").toggleClass("w3-win8-steel").toggleClass("w3-win8-crimson");
+				});
+				
+				/* Remover de todos os links do menu */
+				
+				function removerCyan() {
+					$(".w3-links-js").removeClass("w3-win8-cyan");
+				}
+				
+				$("a[href='#inicio']").addClass("w3-win8-cyan");
+				
+				$(".w3-links-js").on("click", function() {
+					removerCyan();
+					$(this).addClass("w3-win8-cyan");
 				});
 			})
 		</script>
