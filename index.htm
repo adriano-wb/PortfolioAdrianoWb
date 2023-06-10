@@ -257,40 +257,38 @@
 				/* Remover de todos os links do menu */
 				
 				function removerCyan() {
-					$(".w3-links-js").removeClass("w3-win8-cyan");
+					$(".w3-links-js").removeClass("w3-win8-teal");
 				}
 				
-				$("a[href='#inicio']").addClass("w3-win8-cyan");
+				$("a[href='#inicio']").addClass("w3-win8-teal");
 				
 				$(".w3-links-js").on("click", function() {
 					removerCyan();
-					$(this).addClass("w3-win8-cyan");
+					$(this).addClass("w3-win8-teal");
 				});
 				
 				
 				// Fazer com que os links destacados do
 				// menu sejam os que mostrem a seção atual
 				function corretaLinksMarcacao() {
-					console.log(window.scrollY);
-					
 					if (window.scrollY >= 0) {
 						removerCyan();
-						$(".w3-links-js").eq(0).addClass("w3-win8-cyan");
+						$(".w3-links-js").eq(0).addClass("w3-win8-teal");
 					}
 					
 					if (window.scrollY >= screen.height) {
 						removerCyan();
-						$(".w3-links-js").eq(1).addClass("w3-win8-cyan");
+						$(".w3-links-js").eq(1).addClass("w3-win8-teal");
 					}
 
 					if (window.scrollY >= screen.height * 2) {
 						removerCyan();
-						$(".w3-links-js").eq(2).addClass("w3-win8-cyan");
+						$(".w3-links-js").eq(2).addClass("w3-win8-teal");
 					} 
 					
 					if (window.scrollY >= screen.height * 3) {
 						removerCyan();
-						$(".w3-links-js").eq(3).addClass("w3-win8-cyan");
+						$(".w3-links-js").eq(3).addClass("w3-win8-teal");
 					} 
 				}
 				
