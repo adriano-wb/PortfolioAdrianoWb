@@ -32,7 +32,7 @@
 					</div>
 					
 					<!----------------- BOTÃO PARA ABRIR E FECHAR O MENU ---------------->
-					<button type="button" aria-label="Abrir menu de navegação" class="w3-button w3-bar-item botao w3-win8-steel w3-display-topright">
+					<button type="button" class="w3-button w3-bar-item botao w3-win8-steel w3-display-topright">
 						<i class="fa-solid fa-bars icon-botao-menu"></i>
 					</button>
 				</nav>	
@@ -258,14 +258,14 @@
 				/* Remover de todos os links do menu */
 				
 				function removerCyan() {
-					$(".w3-links-js").removeClass("w3-win8-teal");
+					$(".w3-links-js").removeClass("w3-win8-cyan");
 				}
 				
-				$("a[href='#inicio']").addClass("w3-win8-teal");
+				$("a[href='#inicio']").addClass("w3-win8-cyan");
 				
 				$(".w3-links-js").on("click", function() {
 					removerCyan();
-					$(this).addClass("w3-win8-teal");
+					$(this).addClass("w3-win8-cyan");
 				});
 				
 				
@@ -281,22 +281,22 @@
 				
 					if (window.scrollY >= 0) {
 						removerCyan();
-						$(".w3-links-js").eq(0).addClass("w3-win8-teal");
+						$(".w3-links-js").eq(0).addClass("w3-win8-cyan");
 					}
 					
 					if (window.scrollY >= (tamanhoPrimeiraParteApresentacao + tamanhoParallax1 - 50)) {
 						removerCyan();
-						$(".w3-links-js").eq(1).addClass("w3-win8-teal");
+						$(".w3-links-js").eq(1).addClass("w3-win8-cyan");
 					}
 
 					if (window.scrollY >= (tamanhoPrimeiraParteApresentacao + tamanhoParallax1 + tamanhoSegundaParteSobreMim + tamanhoParallax2 - 50)) {
 						removerCyan();
-						$(".w3-links-js").eq(2).addClass("w3-win8-teal");
+						$(".w3-links-js").eq(2).addClass("w3-win8-cyan");
 					} 
 					
 					if (window.scrollY >= (tamanhoPrimeiraParteApresentacao + tamanhoParallax1 + tamanhoSegundaParteSobreMim + tamanhoParallax2 + tamanhoTerceiraPartePortfolio)) {
 						removerCyan();
-						$(".w3-links-js").eq(3).addClass("w3-win8-teal");
+						$(".w3-links-js").eq(3).addClass("w3-win8-cyan");
 					} 
 				}
 				
