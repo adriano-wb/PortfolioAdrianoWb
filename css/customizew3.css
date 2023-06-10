@@ -103,6 +103,10 @@
 	background: url("../img/parallax1.png") 0 0 / cover no-repeat;
 	height: 210px;
 }
+	
+.w3-img-dim-portfolio {
+	width: 100%;
+}
 
 /* ---------- ANIMAÇÕES -------------- */
 
