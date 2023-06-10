@@ -140,7 +140,7 @@
 	
 	/* Ajustar imagem de fundo e parallax */
 	.w3-office-foto {
-		background-position: 0 -300px;
+		background-position: 0 0;
 	}
 				
 	.w3-parallax, .w3-parallax2 {
