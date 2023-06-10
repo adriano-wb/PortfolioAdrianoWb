@@ -46,7 +46,7 @@
 					<img src="img/autor.svg" class="w3-circle w3-img-correctly w3-margin-top" style="width: 240px;height: 240px" alt="Foto do autor do site Adriano José.">
 					<h1 class="w3-xxxlarge w3-serif">Adriano José</h1>
 					<p class="w3-large w3-serif" style="margin-top:-10px">Desenvolvedor web front-end.</p>
-					<a href="#contato" role="button" class="w3-button w3-win8-orange w3-ripple"><strong>Solicitar serviço</strong></a>
+					<a href="#contato" role="button" class="w3-button w3-win8-red w3-ripple"><strong>Solicitar serviço</strong></a>
 					<span class="w3-circle seta anim-arrow w3-win8-blue w3-padding w3-display-bottomright w3-xlarge" style="right:85px;bottom:115px;box-shadow:1px 1px 7px #0003"><i class="fa-solid fa-arrow-down"></i></span>
 				</div>
 			</div>
@@ -57,7 +57,7 @@
 			
 			<!-- --------------- SEGUNDA PARTE ------------------------->
 			<!-- Seção mostrando sobre mim, habilidades e conhecimentos -->
-			<section id="sobre" class="w3-container w3-win8-blue w3-padding-vertical w3-magiccub-foto">
+			<section id="sobre" class="w3-container w3-win8-teal w3-padding-vertical w3-magiccub-foto">
 				<div class="w3-section-container w3-padding">
 					<h2 class="w3-xxlarge w3-center">Sobre Mim</h2>
 					<p class="w3-center">Olá, sou Adriano, um desenvolvedor web front-end de São Paulo, com 24 anos de idade. Sou apaixonado por transformar conceitos criativos em realidade digital por meio do código. Minha missão é criar experiências web visualmente impressionantes e altamente funcionais.<br>
@@ -98,8 +98,8 @@
 					<div class="w3-section-container w3-padding">
 						<h2 class="w3-center">Cursos concluídos e em andamento</h2>
 						<div class="w3-responsive">
-							<table class="w3-table w3-white w3-table-striped">
-								<tr class="w3-black">
+							<table class="w3-table w3-light-grey w3-table-striped w3-round">
+								<tr>
 									<th>Curso</th>
 									<th>Assunto abordado</th>
 									<th>Estado</th>
@@ -107,27 +107,27 @@
 								<tr>
 									<td>Cedaspy</td>
 									<td>Tecnologia da Informação, desenvolver sites, sotfware de imagens</td>
-									<td class="w3-win8-teal">Concluído <i class="fa-solid fa-check"></i></td>
+									<td>Concluído <i class="fa-solid fa-check"></i></td>
 								</tr>
 								<tr>
 									<td>UP Center</td>
 									<td>Tecnologia da Informação, redes, programação e manutenção de micros</td>
-									<td class="w3-win8-teal">Concluído <i class="fa-solid fa-check"></i></td>
+									<td>Concluído <i class="fa-solid fa-check"></i></td>
 								</tr>
 								<tr>
 									<td>UP Center</td>
 									<td>Curso de Inglês</td>
-									<td class="w3-win8-teal">Concluído <i class="fa-solid fa-check"></i></td>
+									<td>Concluído <i class="fa-solid fa-check"></i></td>
 								</tr>
 								<tr>
 									<td>Curso em Vídeo</td>
 									<td>Curso de HTML5</td>
-									<td class="w3-win8-teal">Concluído <i class="fa-solid fa-check"></i></td>
+									<td>Concluído <i class="fa-solid fa-check"></i></td>
 								</tr>
 								<tr>
 									<td>Uniasselv</td>
 									<td>Atualmente cursando Análise e Desenvolvimento de Sistemas.</td>
-									<td class="w3-yellow">Em Andamento <i class="fa-regular fa-clock"></i></td>
+									<td>Em Andamento <i class="fa-regular fa-clock"></i></td>
 								</tr>
 							</table>
 						</div>
@@ -271,6 +271,8 @@
 				// Fazer com que os links destacados do
 				// menu sejam os que mostrem a seção atual
 				function corretaLinksMarcacao() {
+					console.log(window.scrollY);
+					
 					if (window.scrollY >= 0) {
 						removerCyan();
 						$(".w3-links-js").eq(0).addClass("w3-win8-cyan");
