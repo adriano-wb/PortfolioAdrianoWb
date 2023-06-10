@@ -87,7 +87,7 @@
 
 /* Imagens de fundo (desenhos) */
 .w3-office-foto {
-	background: url("../img/home-office-2452806_1280.svg") -350px 0 / cover no-repeat;
+	background: url("../img/home-office-2452806_1280.svg") -350px 0 / cover no-repeat fixed;
 }
 
 .w3-autor-foto {
