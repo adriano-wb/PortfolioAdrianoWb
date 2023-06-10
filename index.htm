@@ -41,17 +41,17 @@
 			</header>
 			
 			<!-------------------- PRIMEIRA PARTE APRESENTAÇÃO ------------------>
-			<div class="w3-win8-cobalt w3-display-flex w3-display-container w3-flex-center w3-height-850 w3-office-foto">
+			<div class="w3-win8-cobalt w3-display-flex w3-display-container w3-flex-center w3-height-850 w3-office-foto" id="apresentacao">
 				<div class="w3-center">
 					<img src="img/autor.svg" class="w3-circle w3-img-correctly w3-margin-top" style="width: 240px;height: 240px" alt="Foto do autor do site Adriano José.">
-					<h1 class="w3-xxxlarge w3-serif">Adriano José</h1>
-					<p class="w3-large w3-serif" style="margin-top:-10px">Desenvolvedor web front-end.</p>
+					<h1 class="w3-xxxlarge">Adriano José</h1>
+					<p class="w3-large" style="margin-top:-10px">Desenvolvedor web front-end.</p>
 					<a href="#contato" role="button" class="w3-button w3-win8-red w3-ripple"><strong>Solicitar serviço</strong></a>
 					<span class="w3-circle seta anim-arrow w3-win8-blue w3-padding w3-display-bottomright w3-xlarge" style="right:85px;bottom:115px;box-shadow:1px 1px 7px #0003"><i class="fa-solid fa-arrow-down"></i></span>
 				</div>
 			</div>
 			<!-------------------- FIM PRIMEIRA PARTE -------------------------->
-			<div class="w3-container w3-parallax">
+			<div class="w3-container w3-parallax" id="para1">
 			
 			</div>
 			
@@ -135,7 +135,7 @@
 				</section>
 			</section>
 			<!----------------------------- FINAL SEGUNDA PARTE --------------------------------->
-			<div class="w3-container w3-parallax2">
+			<div class="w3-container w3-parallax2" id="para2">
 			
 			</div>
 			
@@ -271,22 +271,29 @@
 				// Fazer com que os links destacados do
 				// menu sejam os que mostrem a seção atual
 				function corretaLinksMarcacao() {
+					const tamanhoPrimeiraParteApresentacao = document.getElementById("apresentacao").offsetHeight;
+					const tamanhoSegundaParteSobreMim = document.getElementById("sobre").offsetHeight;
+					const tamanhoTerceiraPartePortfolio = document.getElementById("portfolio").offsetHeight;
+					const tamanhoQuartaParteContato = document.getElementById("contato").offsetHeight;
+					const tamanhoParallax1 = document.getElementById("para1").offsetHeight;
+					const tamanhoParallax2 = document.getElementById("para2").offsetHeight;
+				
 					if (window.scrollY >= 0) {
 						removerCyan();
 						$(".w3-links-js").eq(0).addClass("w3-win8-teal");
 					}
 					
-					if (window.scrollY >= screen.height) {
+					if (window.scrollY >= (tamanhoPrimeiraParteApresentacao + tamanhoParallax1 - 50)) {
 						removerCyan();
 						$(".w3-links-js").eq(1).addClass("w3-win8-teal");
 					}
 
-					if (window.scrollY >= screen.height * 2) {
+					if (window.scrollY >= (tamanhoPrimeiraParteApresentacao + tamanhoParallax1 + tamanhoSegundaParteSobreMim + tamanhoParallax2 - 50)) {
 						removerCyan();
 						$(".w3-links-js").eq(2).addClass("w3-win8-teal");
 					} 
 					
-					if (window.scrollY >= screen.height * 3) {
+					if (window.scrollY >= (tamanhoPrimeiraParteApresentacao + tamanhoParallax1 + tamanhoSegundaParteSobreMim + tamanhoParallax2 + tamanhoTerceiraPartePortfolio)) {
 						removerCyan();
 						$(".w3-links-js").eq(3).addClass("w3-win8-teal");
 					} 
