@@ -95,12 +95,12 @@
 }
 
 .w3-parallax {
-	background: url("../img/home-office-2452806_1280.jpg") 0 0 / cover no-repeat;
+	background: url("../img/home-office-2452806_1280.jpg") 0 0 / cover no-repeat fixed;
 	height: 210px;
 }
 
 .w3-parallax2 {
-	background: url("../img/parallax1.png") 0 0 / cover no-repeat;
+	background: url("../img/parallax1.png") 0 0 / cover no-repeat fixed;
 	height: 210px;
 }
 	
@@ -144,7 +144,7 @@
 	}
 				
 	.w3-parallax, .w3-parallax2 {
-		background-position: 0 -310px;
+		background-position: 0 0;
 		height: 410px;
 	}
 			
