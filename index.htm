@@ -272,12 +272,12 @@
 				// Fazer com que os links destacados do
 				// menu sejam os que mostrem a seção atual
 				function corretaLinksMarcacao() {
-					const tamanhoPrimeiraParteApresentacao = $("#apresentacao").outerHeight();
-					const tamanhoSegundaParteSobreMim = $("#sobre").outerHeight();
-					const tamanhoTerceiraPartePortfolio = $("#portfolio").outerHeight();
-					const tamanhoQuartaParteContato = $("#contato").outerHeight();
-					const tamanhoParallax1 = $("#para1").outerHeight();
-					const tamanhoParallax2 = $("#para2").outerHeight();
+					const tamanhoPrimeiraParteApresentacao = $("#apresentacao").outerHeight(true);
+					const tamanhoSegundaParteSobreMim = $("#sobre").outerHeight(true);
+					const tamanhoTerceiraPartePortfolio = $("#portfolio").outerHeight(true);
+					const tamanhoQuartaParteContato = $("#contato").outerHeight(true);
+					const tamanhoParallax1 = $("#para1").outerHeight(true);
+					const tamanhoParallax2 = $("#para2").outerHeight(true);
 				
 					if (window.scrollY >= 0) {
 						removerCyan();
