@@ -94,7 +94,7 @@
 }
 
 .w3-parallax {
-	background: url("../img/parallax1.webp") 0 0 / cover no-repeat fixed;
+	background: url("../img/parallax1.webp") -300px 0 / cover no-repeat fixed;
 	height: 210px;
 }
 
