@@ -34,6 +34,12 @@
 	z-index: 1000;
 }
 
+/* Correção de posicionamento de imagens */
+.w3-img-correctly {
+	object-fit: cover;
+	object-position: 0 -20px;
+}
+
 /* Nova classe de posicionamento flexbox */
 .w3-display-flex {
 	display: flex;
@@ -88,7 +94,7 @@
 }
 
 .w3-parallax {
-	background: url("../img/parallax1.webp") -500px 0 / cover no-repeat fixed;
+	background: url("../img/parallax1.webp") 0 0 / cover no-repeat fixed;
 	height: 210px;
 }
 
@@ -149,5 +155,9 @@
 	.w3-section-container {
 		width: 850px;
 		margin: 0 auto;
+	}
+	
+	.seta {
+		display: block;
 	}
 }
