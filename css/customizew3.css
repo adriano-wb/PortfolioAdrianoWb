@@ -87,20 +87,20 @@
 
 /* Imagens de fundo (desenhos) */
 .w3-office-foto {
-	background: url("../img/home-office-2452806_1280.svg") -350px 0 / cover no-repeat fixed;
+	background: url("../img/abertura.webp") -350px 0 / cover no-repeat fixed;
 }
 
 .w3-autor-foto {
-	background: url("../img/autor2.svg") -3px -500px / cover no-repeat;
+	background: url("../img/autor.svg") -3px -500px / cover no-repeat;
 }
 
 .w3-parallax {
-	background: url("../img/home-office-2452806-1280.webp") -350px 0 / cover no-repeat fixed;
+	background: url("../img/parallax1.webp") 0 0 / cover no-repeat fixed;
 	height: 210px;
 }
 
 .w3-parallax2 {
-	background: url("../img/parallax1.webp") 0 0 / cover no-repeat fixed;
+	background: url("../img/parallax2.webp") 0 0 / cover no-repeat fixed;
 	height: 210px;
 }
 	
@@ -140,7 +140,7 @@
 	
 	/* Ajustar imagem de fundo e parallax */
 	.w3-office-foto {
-		background-position: 0 0;
+		background-position: 0 -150px;
 	}
 				
 	.w3-parallax, .w3-parallax2 {
