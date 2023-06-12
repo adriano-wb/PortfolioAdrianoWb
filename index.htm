@@ -11,8 +11,8 @@
 		<script async src="https://cdn.ampproject.org/v0.js"></script>
 		<script src="js/f492772e4b.js" crossorigin="anonymous" async defer></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-		<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-
+		<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+		<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
 	</head>
 	<body class="w3-animate-opacity">
 		<main>
@@ -48,7 +48,7 @@
 			<div class="w3-theme-d3 w3-display-flex w3-display-container w3-flex-center w3-height-850 w3-office-foto" id="apresentacao">
 				<div class="w3-overlay w3-show w3-display-topleft"></div>
 				<div class="w3-center w3-animate-zoom" style="z-index:100">
-					<img width="240" height="240" src="img/autor.webp" class="w3-circle w3-img-correctly w3-image w3-margin-top autor-img w3-grayscale-min" style="width: 240px;height: 240px" alt="Foto do autor do site Adriano José.">
+					<div><amp-img width="240" height="240" src="img/autor.png" class="w3-circle w3-border w3-image w3-margin-top w3-sepia-min" style="width: 240px;height: 240px" alt="Foto do autor do site Adriano José."></div>
 					<h1 class="w3-xxxlarge">Adriano José</h1>
 					<p class="" style="margin-top:-10px">Desenvolvedor web front-end.</p>
 					<a href="#contato" role="button" class="w3-button w3-theme-l3 w3-ripple btn-solicitar w3-round-small w3-hover-blue"><strong>Solicitar serviço</strong></a>
@@ -251,12 +251,12 @@
 		<script>
 			$(() => {
 				// Obter a altura de todas as seções da página
-				const tamanhoPrimeiraParteApresentacao = $("#apresentacao").outerHeight();
-				const tamanhoSegundaParteSobreMim = $("#sobre").outerHeight();
-				const tamanhoTerceiraPartePortfolio = $("#portfolio").outerHeight();
-				const tamanhoQuartaParteContato = $("#contato").outerHeight();
-				const tamanhoParallax1 = $("#para1").outerHeight();
-				const tamanhoParallax2 = $("#para2").outerHeight();
+				const parteUmAltura = $("#apresentacao").outerHeight();
+				const parteDoisAltura = $("#sobre").outerHeight();
+				const parteTresAltura = $("#portfolio").outerHeight();
+				const parteQuatroAltura = $("#contato").outerHeight();
+				const parallaxUmAltura = $("#para1").outerHeight();
+				const parallaxDoisAltura = $("#para2").outerHeight();
 			
 				// Ao clicar no botão de abrir e fechar o menu de navegação
 				$(".botao").on("click", () => {
@@ -300,9 +300,9 @@
 				
 				// Fazer com que os links destacados do
 				// menu sejam os que mostrem a seção atual
-				function corretaLinksMarcacao() {
+				function marcacaoDeLinksNoScroll() {
 					
-					// Quando a página estiver na seção "Home"
+					// Se a página estiver na seção "Home"
 					if (window.scrollY >= 0) {
 						// Reseta/remove todos os marcadores dos links 
 						// no menu de navegação
@@ -313,9 +313,9 @@
 						$(".w3-links-js").eq(0).addClass("w3-theme-d3");
 					}
 					
-					// Quando a página estiver na seção "Sobre"
+					// Se a página estiver na seção "Sobre"
 					// e um pouco menos de 50px de altura
-					if (window.scrollY >= (tamanhoPrimeiraParteApresentacao + tamanhoParallax1 - 50)) {
+					if (window.scrollY >= (parteUmAltura + parallaxUmAltura-50)) {
 						// Reseta/remove todos os marcadores dos links 
 						// no menu de navegação
 						removerCyan();
@@ -325,9 +325,13 @@
 						$(".w3-links-js").eq(1).addClass("w3-theme-d3");
 					}
 					
-					// Quando a página estiver na seção "Portfólio"
+					// Se a página estiver na seção "Portfólio"
 					// e um pouco menos de 50px de altura
-					if (window.scrollY >= (tamanhoPrimeiraParteApresentacao + tamanhoParallax1 + tamanhoSegundaParteSobreMim + tamanhoParallax2 - 50)) {
+					if (window.scrollY >= (
+							parteUmAltura + 
+							parallaxUmAltura + 
+							parteDoisAltura + 
+							parallaxDoisAltura - 50)) {
 						// Reseta/remove todos os marcadores dos links 
 						// no menu de navegação
 						removerCyan();
@@ -337,9 +341,14 @@
 						$(".w3-links-js").eq(2).addClass("w3-theme-d3");
 					} 
 					
-					// Quando a página estiver na seção "Contato"
+					// Se a página estiver na seção "Contato"
 					// e um pouco menos de 50px de altura
-					if (window.scrollY >= (tamanhoPrimeiraParteApresentacao + tamanhoParallax1 + tamanhoSegundaParteSobreMim + tamanhoParallax2 + tamanhoTerceiraPartePortfolio- 50)) {
+					if (window.scrollY >= (
+							parteUmAltura + 
+							parallaxUmAltura + 
+							parteDoisAltura + 
+							parallaxDoisAltura + 
+							parteTresAltura-50)) {
 						// Reseta/remove todos os marcadores dos links 
 						// no menu de navegação
 						removerCyan();
@@ -350,8 +359,8 @@
 					} 
 				}
 				
-				$(window).on("load", corretaLinksMarcacao); 
-				$(window).on("scroll", corretaLinksMarcacao); 
+				$(window).on("load", marcacaoDeLinksNoScroll); 
+				$(window).on("scroll", marcacaoDeLinksNoScroll); 
 			})
 		</script>
 	</body>
