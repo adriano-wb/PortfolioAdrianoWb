@@ -38,7 +38,6 @@
 .w3-img-correctly {
 	object-fit: cover;
 	object-position: 0 -20px;
-	filter: saturate(120%);
 }
 
 /* Nova classe de posicionamento flexbox */
@@ -88,10 +87,6 @@
 /* Imagens de fundo (desenhos) */
 .w3-office-foto {
 	background: url("../img/abertura.webp") -350px 0 / cover no-repeat fixed;
-}
-
-.w3-autor-foto {
-	background: url("../img/autor.svg") -3px -500px / cover no-repeat;
 }
 
 .w3-parallax {
