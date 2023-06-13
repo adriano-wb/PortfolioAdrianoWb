@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@300&family=Open+Sans&display=swap');
+
+/* Estilizar links do menu de navegação */
+.w3-bar-item {
+	font: 1.2rem 'open sans', sans-serif;
+	transition: 0.2s;
+	text-transform: uppercase;
+	letter-spacing: 0.05rem;
+}
+
+.w3-social-midia {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+/* Link atual */
+.atual {
+	position: relative;
+	z-index: 1000;
+}
+
+/* Estilizar container de redes sociais */
+
+/* Links ocultos por padrão */
+#itemsOcultos {
+	display: none;
+}
+
+/* Exibir botão no mobile */
+.botao.w3-button {
+	display: block;
+	width: 47.75px;
+	z-index: 1000;
+}
+
+/* Nova classe de posicionamento flexbox */
+.w3-display-flex {
+	display: flex;
+	width: 100%;
+}
+
+/* Nova classe para positionamento flexbox no centro */
+.w3-flex-center {
+	align-items: center;
+	justify-content: center;
+}
+
+/* Nova classe de positionamento fixado */
+.w3-display-fixed {
+	position: fixed;
+	z-index: 1000;
+}
+
+/* Classe altura total */
+.w3-height-100 {
+	height: 100vh;
+}
+
+/* Ajustar positição de seções em largura total */
+.w3-section-container,
+.w3-container-item {
+	width: 100%;
+	margin: 0;
+}
+
+.w3-padding-vertical {
+	padding: 100px 0;
+}
+
+/* Animar ícone de "ver mais" */
+.anim-arrow {
+	animation: upBottom 1s infinite;
+}
+
+/* Por padrão ele é oculto */
+.seta {
+	display: none;
+	box-shadow:1px 1px 7px #0003;
+	right: 85px;
+	bottom: 85px;
+}
+
+/* Imagens de fundo (desenhos) */
+.w3-office-foto {
+	background: url("../img/abertura.webp") -350px 0 / cover no-repeat fixed;
+}
+
+.w3-autor-foto {
+	background: url("../img/autor.jpg") -3px -500px / cover no-repeat;
+}
+
+.w3-parallax {
+	background: url("../img/parallax1.webp") 0 0 / cover no-repeat fixed;
+	height: 210px;
+}
+
+.w3-parallax2 {
+	background: url("../img/parallax2.webp") 0 0 / cover no-repeat fixed;
+	height: 210px;
+}
+
+/* ---------- ANIMAÇÕES -------------- */
+
+/* icone "ver mais" */
+@keyframes upBottom {
+	0% {bottom: 85px}
+	50% {bottom: 115px}
+	100% {bottom: 85px}
+}
+
+/* Para monitores maiores do que 600px de largura */
+@media only screen and (min-width: 600px) {
+	/* executar as seguintes regras */
+	
+	.w3-social-midia {
+		display: flex;
+		justify-content: center;
+		float: right;
+		width: inherit;
+	}
+
+	/* Links exibidos por padrão */
+	#itemsOcultos {
+		display: block;
+	}
+	
+	/* Ocultar botão no desktop */
+	.botao.w3-button {
+		display: none;
+	}
+	
+	/* Ajustar imagem de fundo e parallax */
+	.w3-office-foto {
+		background-position: 0 -150px;
+	}
+				
+	.w3-parallax, .w3-parallax2 {
+		background-position: 0 0;
+		height: 410px;
+	}
+			
+	.w3-container-item {
+		margin: 0 auto;
+		width: 1410px;
+	}
+	
+	.w3-section-container {
+		width: 850px;
+		margin: 0 auto;
+	}
+	
+	.seta {
+		display: block;
+	}
+}
