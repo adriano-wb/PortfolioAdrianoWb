@@ -34,12 +34,6 @@
 	z-index: 1000;
 }
 
-/* Correção de posicionamento de imagens */
-.w3-img-correctly {
-	object-fit: cover;
-	object-position: 0 -20px;
-}
-
 /* Nova classe de posicionamento flexbox */
 .w3-display-flex {
 	display: flex;
@@ -59,7 +53,7 @@
 }
 
 /* Classe altura total */
-.w3-height-850 {
+.w3-height-100 {
 	height: 100vh;
 }
 
@@ -82,6 +76,9 @@
 /* Por padrão ele é oculto */
 .seta {
 	display: none;
+	box-shadow:1px 1px 7px #0003;
+	right: 85px;
+	bottom: 85px;
 }
 
 /* Imagens de fundo (desenhos) */
@@ -89,8 +86,12 @@
 	background: url("../img/abertura.webp") -350px 0 / cover no-repeat fixed;
 }
 
+.w3-autor-foto {
+	background: url("../img/autor.jpg") -3px -500px / cover no-repeat;
+}
+
 .w3-parallax {
-	background: url("../img/parallax1.webp") -500px 0 / cover no-repeat fixed;
+	background: url("../img/parallax1.webp") 0 0 / cover no-repeat fixed;
 	height: 210px;
 }
 
@@ -98,18 +99,14 @@
 	background: url("../img/parallax2.webp") 0 0 / cover no-repeat fixed;
 	height: 210px;
 }
-	
-.w3-img-dim-portfolio {
-	width: 100%;
-}
 
 /* ---------- ANIMAÇÕES -------------- */
 
 /* icone "ver mais" */
 @keyframes upBottom {
-	0% {bottom: 150px}
+	0% {bottom: 85px}
 	50% {bottom: 115px}
-	100% {bottom: 150px}
+	100% {bottom: 85px}
 }
 
 /* Para monitores maiores do que 600px de largura */
