@@ -9,7 +9,7 @@ $(() => {
 	const parallaxTresAltura = $("#para3").outerHeight();
 
 	// Ao clicar no botão de abrir e fechar o menu de navegação
-	$(".botao").on("click", () => {
+	$(".botao").on("click", function() {
 		
 		// Exibe ou ocultar os links ocultos
 		$("#itemsOcultos").toggle();	
@@ -20,6 +20,12 @@ $(() => {
 		.toggleClass("fa-bars")
 		.toggleClass("fa-xmark");
 		
+		/* Alterar mensagens para tecnologias assistivas */
+		if ($("#itemsOcultos").css("display") !== "block") { 
+			$(this).find(".sr-only").text("Abrir menu");
+		} else {
+			$(this).find(".sr-only").text("Fechar menu");
+		}
 		// Alterna a cor do fundo do botão para metálica quando fechado
 		// e um vermelho(ketcup) quando aberto
 		// $(".botao")
