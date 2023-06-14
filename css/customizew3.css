@@ -1,5 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Geologica:wght@300&family=Open+Sans&display=swap');
 
+/* Usado por usuários de leitores de tela */
+.sr-only {
+	position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 /* Estilizar links do menu de navegação */
 .w3-bar-item {
 	font: 1.2rem 'open sans', sans-serif;
