@@ -30,27 +30,30 @@ $(() => {
 	// Reseta todos os marcadores de links do menu
 	// que mostram a seção atual na cor ciano(cyan)
 	function removerCyan() {
-		$(".w3-links-js").removeClass("w3-theme-d3");
+		$(".w3-links-js").removeClass("w3-win8-cyan");
 	}
 	
 	// Por padrão o primeiro link de "Home" é marcado
 	// cor a cor cyan que corresponde a seção atual.
-	$("a[href='#inicio']").addClass("w3-theme-d3");
+	$("a[href='#inicio']").addClass("w3-win8-cyan");
 	
 	// Ao clicar em algum link do menu de navegação
-	$(".w3-links-js").on("click", () => {
+	$(".w3-links-js").on("click", function() {
 		// Reseta/remove todos os marcadores dos links 
 		// no menu de navegação
 		removerCyan();
 		
 		// E adiciona o marcador apenas ao selecionado
-		$(".w3-links-js").addClass("w3-theme-d3");
+		$(this).addClass("w3-win8-cyan");
 	});
 	
 	
 	// Fazer com que os links destacados do
 	// menu sejam os que mostrem a seção atual
 	function marcacaoDeLinksNoScroll() {
+		let offset = window.pageYOffset;
+		let $parallax = $('.w3-parallax');
+		$parallax.css("background-position-y", offset * 0.7 + 'px'); /* Ajuste o valor 0.7 para controlar a intensidade do efeito de paralaxe */
 		
 		// Se a página estiver na seção "Home"
 		if (window.scrollY >= 0) {
@@ -60,7 +63,7 @@ $(() => {
 			
 			// Significa que o usuário está sobre a seção "home"
 			// adiciona o marcador apenas ao link do menu que corresponde
-			$(".w3-links-js").eq(0).addClass("w3-theme-d3");
+			$(".w3-links-js").eq(0).addClass("w3-win8-cyan");
 		}
 		
 		// Se a página estiver na seção "Sobre"
@@ -72,7 +75,7 @@ $(() => {
 			
 			// Significa que o usuário está sobre a seção "sobre"
 			// adiciona o marcador apenas ao link do menu que corresponde
-			$(".w3-links-js").eq(1).addClass("w3-theme-d3");
+			$(".w3-links-js").eq(1).addClass("w3-win8-cyan");
 		}
 		
 		// Se a página estiver na seção "Portfólio"
@@ -88,7 +91,7 @@ $(() => {
 			
 			// Significa que o usuário está sobre a seção "portfólio"
 			// adiciona o marcador apenas ao link do menu que corresponde
-			$(".w3-links-js").eq(2).addClass("w3-theme-d3");
+			$(".w3-links-js").eq(2).addClass("w3-win8-cyan");
 		} 
 		
 		// Se a página estiver na seção "Contato"
@@ -106,9 +109,23 @@ $(() => {
 			
 			// Significa que o usuário está sobre a seção "contato"
 			// adiciona o marcador apenas ao link do menu que corresponde
-			$(".w3-links-js").eq(3).addClass("w3-theme-d3");
+			$(".w3-links-js").eq(3).addClass("w3-win8-cyan");
 		} 
 	}
+	
+	// Evento para efeito deslizante ao selecionar opção no menu de navegação
+	$(".w3-links-js").on("click", function(e) {
+		if (this.hash !== '') {
+			e.preventDefault();
+			const hash = this.hash;
+			$('html, body').animate(
+        {
+          scrollTop: $(hash).offset().top
+        },
+        800 // Velocidade de deslizamento em milissegundos
+      );
+		}
+	});
 	
 	$(window).on("load", marcacaoDeLinksNoScroll); 
 	$(window).on("scroll", marcacaoDeLinksNoScroll); 
