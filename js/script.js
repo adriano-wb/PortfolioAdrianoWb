@@ -12,7 +12,7 @@ $(() => {
 	$(".botao").on("click", function() {
 		
 		// Exibe ou ocultar os links ocultos
-		$("#itemsOcultos").toggle();	
+		$("#itemsOcultos").slideToggle();	
 		
 		// Alterna entre o ícone de "X" quando aberto
 		// e o icone de hamburguer quando fechado
