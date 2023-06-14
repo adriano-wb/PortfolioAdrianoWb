@@ -5,7 +5,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" media="all" href="css/w3.css">
-		<link rel="stylesheet" media="all" href="css/w3-colors-win8.css">
+		<link rel="stylesheet" href="css/w3-colors-win8.css">
 		<link rel="stylesheet" media="all" href="css/customizew3.css">
 		<script async src="https://cdn.ampproject.org/v0.js"></script>
 		<script src="js/f492772e4b.js" crossorigin="anonymous" async defer></script>
@@ -34,7 +34,8 @@
 					</div>
 					
 					<!----------------- BOTÃO PARA ABRIR E FECHAR O MENU ---------------->
-					<button type="button" class="w3-button w3-bar-item botao w3-theme-l2 w3-display-topright">
+					<button type="button" aria-expanded="false" aria-controls="itemsOcultos" aria-label="Abrir menu de navegação" class="w3-button w3-bar-item botao w3-theme-l2 w3-display-topright">
+						<span class="sr-only">Abrir menu</span>
 						<i class="fa-solid fa-bars icon-botao-menu"></i>
 					</button>
 				</nav>	
