@@ -13,6 +13,11 @@
   border: 0;
 }
 
+.w3-blue-edited {
+	background-color: #263fbd;
+	color: #FFF;
+}
+
 /* Estilizar links do menu de navegação */
 .w3-bar-item {
 	font: 1.2rem 'open sans', sans-serif;
