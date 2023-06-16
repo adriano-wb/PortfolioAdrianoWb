@@ -22,7 +22,10 @@
 .w3-bar-item {
 	transition: 0.2s;
 	text-transform: uppercase;
-	padding-left: 19px!important;
+}
+
+.w3-bar-item:not(.botao) {
+	padding-left: 19px;
 }
 
 .w3-social-midia {
