@@ -58,8 +58,12 @@ $(() => {
 	// menu sejam os que mostrem a seção atual
 	function marcacaoDeLinksNoScroll() {
 		let offset = window.pageYOffset;
-		let $parallax = $('.w3-parallax');
-		$parallax.css("background-position-y", offset * 0.7 + 'px'); /* Ajuste o valor 0.7 para controlar a intensidade do efeito de paralaxe */
+		let $parallax1 = $('.w3-parallax1');
+		let $parallax2 = $('.w3-parallax2');
+		let $parallax3 = $('.w3-parallax3');
+		$parallax1.css("background-position-y", (offset * 0.4) - 800 + 'px'); /* Ajuste o valor 0.7 para controlar a intensidade do efeito de paralaxe */
+		$parallax2.css("background-position-y", (offset * 0.4) - 1200 + 'px'); /* Ajuste o valor 0.7 para controlar a intensidade do efeito de paralaxe */
+		$parallax3.css("background-position-y", (offset * 0.4) - 2000 + 'px'); /* Ajuste o valor 0.7 para controlar a intensidade do efeito de paralaxe */
 		
 		// Se a página estiver na seção "Home"
 		if (window.scrollY >= 0) {
