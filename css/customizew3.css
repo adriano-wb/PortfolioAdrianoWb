@@ -121,17 +121,17 @@
 }
 
 .w3-parallax1 {
-	background: url("../img/parallax1.webp") center / cover;
+	background: url("../img/parallax1.webp") center / cover no-repeat;
 	filter: grayscale(110%);
 }
 
 .w3-parallax2 {
-	background: url("../img/parallax2.webp") center / cover;
+	background: url("../img/parallax2.webp") center / cover no-repeat;
 	filter: grayscale(110%);
 }
 
 .w3-parallax3 {
-	background: url("../img/parallax3.webp") center / cover;
+	background: url("../img/parallax3.webp") center / cover no-repeat;
 	filter: grayscale(110%);
 }
 
