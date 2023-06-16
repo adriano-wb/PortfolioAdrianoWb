@@ -36,12 +36,12 @@ $(() => {
 	// Reseta todos os marcadores de links do menu
 	// que mostram a seção atual na cor ciano(cyan)
 	function removerCyan() {
-		$(".w3-links-js").removeClass("w3-theme-l1");
+		$(".w3-links-js").removeClass("w3-white");
 	}
 	
 	// Por padrão o primeiro link de "Home" é marcado
 	// cor a cor cyan que corresponde a seção atual.
-	$("a[href='#inicio']").addClass("w3-theme-l1");
+	$("a[href='#inicio']").addClass("w3-white");
 	
 	// Ao clicar em algum link do menu de navegação
 	$(".w3-links-js").on("click", function() {
@@ -50,7 +50,7 @@ $(() => {
 		removerCyan();
 		
 		// E adiciona o marcador apenas ao selecionado
-		$(this).addClass("w3-theme-l1");
+		$(this).addClass("w3-white");
 	});
 	
 	
@@ -66,7 +66,7 @@ $(() => {
 			
 			// Significa que o usuário está sobre a seção "home"
 			// adiciona o marcador apenas ao link do menu que corresponde
-			$(".w3-links-js").eq(0).addClass("w3-theme-l1");
+			$(".w3-links-js").eq(0).addClass("w3-white");
 		}
 		
 		// Se a página estiver na seção "Sobre"
@@ -78,7 +78,7 @@ $(() => {
 			
 			// Significa que o usuário está sobre a seção "sobre"
 			// adiciona o marcador apenas ao link do menu que corresponde
-			$(".w3-links-js").eq(1).addClass("w3-theme-l1");
+			$(".w3-links-js").eq(1).addClass("w3-white");
 		}
 		
 		// Se a página estiver na seção "Portfólio"
@@ -94,7 +94,7 @@ $(() => {
 			
 			// Significa que o usuário está sobre a seção "portfólio"
 			// adiciona o marcador apenas ao link do menu que corresponde
-			$(".w3-links-js").eq(2).addClass("w3-theme-l1");
+			$(".w3-links-js").eq(2).addClass("w3-white");
 		} 
 		
 		// Se a página estiver na seção "Contato"
@@ -112,7 +112,7 @@ $(() => {
 			
 			// Significa que o usuário está sobre a seção "contato"
 			// adiciona o marcador apenas ao link do menu que corresponde
-			$(".w3-links-js").eq(3).addClass("w3-theme-l1");
+			$(".w3-links-js").eq(3).addClass("w3-white");
 		} 
 	}
 	
