@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@300&family=Open+Sans&display=swap');
+
+/* Usado por usuários de leitores de tela */
+.sr-only {
+	position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.w3-blue-edited {
+	background-color: #263fbd;
+	color: #FFF;
+}
+
+/* Estilizar links do menu de navegação */
+.w3-bar-item {
+	transition: 0.2s;
+	text-transform: uppercase;
+	padding-left: 19px!important;
+}
+
+.w3-social-midia {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+/* Link atual */
+.atual {
+	position: relative;
+	z-index: 1000;
+}
+
+/* Estilizar container de redes sociais */
+
+/* Links ocultos por padrão */
+#itemsOcultos {
+	display: none;
+}
+
+/* Exibir botão no mobile */
+.botao.w3-button {
+	display: block;
+	width: 47.75px;
+	z-index: 1000;
+}
+
+/* Nova classe de posicionamento flexbox */
+.w3-display-flex {
+	display: flex;
+	width: 100%;
+}
+
+/* Nova classe para positionamento flexbox no centro */
+.w3-flex-center {
+	align-items: center;
+	justify-content: center;
+}
+
+/* Nova classe de positionamento fixado */
+.w3-display-fixed {
+	position: fixed;
+	z-index: 1000;
+}
+
+/* Classe altura total */
+.w3-height-100 {
+	height: 100vh;
+}
+
+/* Ajustar positição de seções em largura total */
+.w3-section-container,
+.w3-container-item {
+	width: 100%;
+	margin: 0;
+}
+
+.w3-padding-vertical {
+	padding: 100px 0;
+}
+
+/* Animar ícone de "ver mais" */
+.anim-arrow {
+	animation: upBottom 1s infinite;
+}
+
+/* Por padrão ele é oculto */
+.seta {
+	display: none;
+	box-shadow:1px 1px 7px #0003;
+	right: 85px;
+	bottom: 85px;
+}
+
+/* Imagens de fundo (desenhos) */
+.w3-office-foto {
+	background: url("../img/abertura.webp") -350px 0 / cover no-repeat fixed;
+	z-index: 10;
+}
+
+.parallax-container {
+	height: 200px;
+	position:relative;
+	top: 0;
+	z-index: -100;
+}
+
+.w3-parallax1 {
+	background: url("../img/parallax1.webp") center / cover no-repeat;
+	filter: grayscale(110%);
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.w3-parallax2 {
+	background: url("../img/parallax2.webp") center / cover no-repeat;
+	filter: grayscale(110%);
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.w3-parallax3 {
+	background: url("../img/parallax3.webp") center / cover no-repeat;
+	filter: grayscale(110%);
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* ---------- ANIMAÇÕES -------------- */
+
+/* icone "ver mais" */
+@keyframes upBottom {
+	0% {bottom: 85px}
+	50% {bottom: 115px}
+	100% {bottom: 85px}
+}
+
+/* Para monitores maiores do que 600px de largura */
+@media only screen and (min-width: 600px) {
+	/* executar as seguintes regras */
+	
+	.w3-social-midia {
+		display: flex;
+		justify-content: center;
+		float: right;
+		width: inherit;
+	}
+
+	/* Links exibidos por padrão */
+	#itemsOcultos {
+		display: block;
+	}
+	
+	/* Ocultar botão no desktop */
+	.botao.w3-button {
+		display: none;
+	}
+	
+	/* Ajustar imagem de fundo e parallax */
+	.w3-office-foto {
+		background-position: 0 -150px;
+	}
+			
+	.w3-container-item {
+		margin: 0 auto;
+		width: 1410px;
+	}
+	
+	.w3-section-container {
+		width: 850px;
+		margin: 0 auto;
+	}
+	
+	.seta {
+		display: block;
+	}
+	
+	.parallax-container {
+		height: 450px;
+	}
+	
+	.w3-parallax1,
+  .w3-parallax2	{
+		background-position-y: -385px;
+	}
+	
+	.w3-parallax3 {
+		background-position-y: -85px;
+	}
+}
