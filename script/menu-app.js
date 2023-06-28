@@ -10,7 +10,6 @@ $(() => {
             // Seções
             this.secoes = elementos.elmSecoes;
             // Links ocultados
-            this.hideLinks = elementos.hideLinks;
             this.parallaxs = elementos.parallaxs;
             // Obtêm o elemento usado como botão para
             // abrir e fechar o menu
@@ -41,7 +40,7 @@ $(() => {
         }
         // Função para abrir ou fechar menu de navegação
         abrirOuFecharMenu() {
-            $(this.hideLinks).slideToggle();
+            $(this.allLinks.not(".menu__item--button").slideToggle());
             $(".icon")
                 .toggleClass("fa-bars")
                 .toggleClass("fa-xmark")
@@ -51,7 +50,7 @@ $(() => {
         // Função para realçar links ao rolar página
         rolagemDestacaODeterminadoLink() {
             // Se a página estiver na seção "Home"
-            if (window.scrollY >= 0) {
+            if (objJanela.scrollTop() >= 0) {
                 // Reseta/remove todos os marcadores dos links 
                 // no menu de navegação
                 this.resetarTodosOsLinksDestacados();
@@ -61,7 +60,7 @@ $(() => {
             }
             // Se a página estiver na seção "Sobre"
             // e um pouco menos de 50px de altura
-            if (window.scrollY >= (this.parteUmAltura() + this.parallaxUmAltura() - 120)) {
+            if (objJanela.scrollTop() >= (this.parteUmAltura() + this.parallaxUmAltura() - 120)) {
                 // Reseta/remove todos os marcadores dos links 
                 // no menu de navegação
                 this.resetarTodosOsLinksDestacados();
@@ -71,7 +70,7 @@ $(() => {
             }
             // Se a página estiver na seção "Portfólio"
             // e um pouco menos de 50px de altura
-            if (window.scrollY >= (this.parteUmAltura() +
+            if (objJanela.scrollTop() >= (this.parteUmAltura() +
                 this.parallaxUmAltura() +
                 this.parteDoisAltura() +
                 this.parallaxDoisAltura() - 120)) {
@@ -84,7 +83,7 @@ $(() => {
             }
             // Se a página estiver na seção "Contato"
             // e um pouco menos de 50px de altura
-            if (window.scrollY >= (this.parteUmAltura() +
+            if (objJanela.scrollTop() >= (this.parteUmAltura() +
                 this.parallaxUmAltura() +
                 this.parteDoisAltura() +
                 this.parallaxDoisAltura() +
