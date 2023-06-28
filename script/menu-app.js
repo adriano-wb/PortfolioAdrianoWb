@@ -51,7 +51,7 @@ $(() => {
         // Função para realçar links ao rolar página
         rolagemDestacaODeterminadoLink() {
             // Se a página estiver na seção "Home"
-            if (objJanela.scrollTop() >= 0) {
+            if (window.scrollY >= 0) {
                 // Reseta/remove todos os marcadores dos links 
                 // no menu de navegação
                 this.resetarTodosOsLinksDestacados();
@@ -61,7 +61,7 @@ $(() => {
             }
             // Se a página estiver na seção "Sobre"
             // e um pouco menos de 50px de altura
-            if (objJanela.scrollTop() >= (this.parteUmAltura() + this.parallaxUmAltura() - 120)) {
+            if (window.scrollY >= (this.parteUmAltura() + this.parallaxUmAltura() - 120)) {
                 // Reseta/remove todos os marcadores dos links 
                 // no menu de navegação
                 this.resetarTodosOsLinksDestacados();
@@ -71,7 +71,7 @@ $(() => {
             }
             // Se a página estiver na seção "Portfólio"
             // e um pouco menos de 50px de altura
-            if (objJanela.scrollTop() >= (this.parteUmAltura() +
+            if (window.scrollY >= (this.parteUmAltura() +
                 this.parallaxUmAltura() +
                 this.parteDoisAltura() +
                 this.parallaxDoisAltura() - 120)) {
@@ -84,7 +84,7 @@ $(() => {
             }
             // Se a página estiver na seção "Contato"
             // e um pouco menos de 50px de altura
-            if (objJanela.scrollTop() >= (this.parteUmAltura() +
+            if (window.scrollY >= (this.parteUmAltura() +
                 this.parallaxUmAltura() +
                 this.parteDoisAltura() +
                 this.parallaxDoisAltura() +
