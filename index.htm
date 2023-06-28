@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html amp lang="pt-BR">
+	<head>
+		<title>Trabalhando com TypeScript</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<link rel="stylesheet" media="all" href="https://www.w3schools.com/w3css/4/w3.css">
+		<script async src="https://kit.fontawesome.com/f492772e4b.js" crossorigin="anonymous"></script>
+		<script async src="https://cdn.ampproject.org/v0.js"></script>
+		<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+		<link rel="stylesheet" href="css/estilo.css" amp-custom>
+	</head>
+	<body>
+		<main id="inicio">
+			<!-- Menu principal. Menu topo -->
+			<header class="cabecalho">
+				<a href="index.htm" class="cabecalho-logo w3-margin-left w3-xlarge" style="letter-spacing:0.2rem"><i class="fa-solid w3-text-blue w3-xlarge fa-code w3-xlarge"></i> Dev;</a>
+				<nav class="menu">
+					<a href="#inicio" class="menu__item menu__item--active" aria-current="page">Home</a>
+					<a href="#sobre" class="menu__item">Sobre</a>
+					<a href="#portfolio" class="menu__item">Portfólio</a>
+					<a href="#contato" class="menu__item">Contato</a>
+					
+					<!-- Botão de abrir e fechar o menu de navegação -->
+					<button type="button" class="menu__item menu__item--button">
+						<span class="sr-only">Abrir o menu de navegação</span>
+						<i class="icon fa fa-bars"></i>
+					</button>
+				</nav>
+			</header>
+			
+			<!-- Parte apresentação, foto, nome e descrição -->
+			<section class="capa w3-display-container">
+				<!-- Tela opaca escura para sobrepor imagem -->
+				<div class="capa__fundo-escuro"></div>
+				<div class="capa-autor w3-center" style="z-index:100">
+					
+					<!-- Foto do autor do site -->
+					<div><amp-img src="img/autor.webp" width="240" height="240" class="w3-circle w3-border w3-border-blue w3-grayscale-min capa-autor__img" alt="Foto do autor do site Adriano José." layout="responsive"></div>
+					
+					<!-- Título e descrição -->
+					<h1 class="capa-autor__titulo w3-xxxlarge w3-righteous">Adriano José</h1>
+					<p class="capa-autor__descricao w3-xlarge" style="margin-top:-10px">Desenvolvedor web front-end.</p>
+					
+					<!-- Botão "solicitar meus serviços" -->
+					<a href="#contato" role="button" class="w3-button w3-light-gray w3-round capa-autor__button"><b>Contate-me</b> &nbsp;<i class="fa-solid fa-square-phone"></i></a>
+					
+					<!-- Icon exigindo ver mais da página -->
+					<span class="w3-circle capa-autor__seta anim-arrow w3-black w3-padding w3-border w3-border-white w3-large w3-display-bottomright w3-large"><i class="fa-solid fa-arrow-down"></i></span>
+				</div>
+			</section>
+			
+			<!-- Primeiro parallax -->
+			<div class="parallax w3-theme-l5">
+				<div class="w3-container w3-parallax w3-parallax1" id="para1"></div>
+			</div>
+			
+			<!-- Segunda parte seção mostrando sobre mim, habilidades e conhecimentos -->
+			<section id="sobre" class="w3-container w3-theme-l5 w3-padding-100 w3-magiccub-foto">
+			
+				<!-- Descrição sobre mim -->
+				<div class="w3-container-center w3-padding">
+					<h2 class="w3-xxlarge w3-center">Sobre Mim</h2>
+					<p class="w3-center w3-large">Olá, sou Adriano, um desenvolvedor web front-end de São Paulo, com 24 anos de idade. Sou apaixonado por transformar conceitos criativos em realidade digital por meio do código. Minha missão é criar experiências web visualmente impressionantes e altamente funcionais.</p>
+				</div>
+				
+				<!-- Seção meus conhecimentos -->
+				<section>
+					<div class="w3-container-center w3-padding">
+						<section>
+							<h2 class="w3-center">Meus conhecimentos</h2>
+							<div class="w3-center conhecimentos">
+								<div class="w3-center w3-mobile w3-jumbo w3-padding">
+									<amp-img height="85" width="85" src="img/html-5.webp" title="HTML5" alt="Linguagem de marcação HTML5">
+								</div>
+								<div class="w3-center w3-mobile w3-jumbo w3-padding">
+									<amp-img height="85" width="85" src="img/css-3.webp" title="CSS3" alt="Linguagem de folha de estilo CSS">
+								</div>
+								<div class="w3-center w3-mobile w3-jumbo w3-padding">
+									<amp-img height="85" width="85" src="img/js.webp" title="JavaScript" alt="Linguagem de programação JavaScript">
+								</div>
+								<div class="w3-center w3-mobile w3-jumbo w3-padding">
+									<amp-img height="85" width="85" src="img/typescript.webp" title="TypeScript" alt="Linguagem de programação TypeScript">
+								</div>
+								<div class="w3-center w3-mobile w3-jumbo w3-padding">
+									<amp-img height="85" width="85" src="img/bootstrap.webp" title="Bootstrap 5" alt="Framework Bootstrap 5">
+								</div>
+								<div class="w3-center w3-mobile w3-jumbo w3-padding">
+									<amp-img height="85" width="85" src="img/sass.webp" title="SASS" alt="Linguagem de pré-processamento CSS, SASS">
+								</div>
+								<div class="w3-center w3-mobile w3-jumbo w3-padding">
+									<amp-img height="85" width="85" src="img/jquery.webp" title="jQuery" alt="Biblioteca JavaScript, jQuery">
+								</div>
+							</div>
+						</section>
+					</div>
+				</section>
+				
+				<!-- Tabela com cursos que estou fazendo ou que concluí -->
+				<section>
+					<div class="w3-container-center w3-padding">
+						<h2 class="w3-center">Cursos concluídos e em andamento</h2>
+						<div class="w3-responsive">
+							<table class="w3-table w3-large w3-round-large w3-bordered">
+								<tr>
+									<th>Curso</th>
+									<th>Assunto abordado</th>
+									<th>Estado</th>
+								</tr>
+								<tr>
+									<td>Cedaspy</td>
+									<td>web designer, internet, redes de relacionamento, práticas de escritório e recursos humanos.</td>
+									<td>Concluído <i class="fa-solid fa-check"></i></td>
+								</tr>
+								<tr>
+									<td>UP Center</td>
+									<td>Tecnologia da Informação, redes, programação e manutenção de micros</td>
+									<td>Concluído <i class="fa-solid fa-check"></i></td>
+								</tr>
+								<tr>
+									<td>UP Center</td>
+									<td>Curso de Inglês</td>
+									<td>Concluído <i class="fa-solid fa-check"></i></td>
+								</tr>
+								<tr>
+									<td>Curso em Vídeo</td>
+									<td>Curso de HTML5</td>
+									<td>Concluído <i class="fa-solid fa-check"></i></td>
+								</tr>
+								<tr class="w3-border-0">
+									<td>Uniasselv</td>
+									<td>Atualmente cursando Análise e Desenvolvimento de Sistemas.</td>
+									<td>Em adamento</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</section>
+			</section>
+			<!----------------------------- FINAL SEGUNDA PARTE --------------------------------->
+			
+			<!-- Segundo parallax -->
+			<div class="parallax w3-theme-l5">
+				<div class="w3-container w3-parallax w3-parallax2" id="para2"></div>
+			</div>
+			<!-- Fim segundo parallax -->
+			
+			<!------------------------------------- PORTFÓLIO TECERIA PARTE------------------------------------->
+			<section id="portfolio" class="w3-container w3-theme-l5 w3-padding-100">
+				<div class="w3-padding w3-container-center">
+					<h2 class="w3-center w3-xxlarge">Portfólio</h2>
+					<p class="w3-padding">Veja algumas de minhas criações, projetos simples e interativos:</p>
+					
+					<article class="w3-row w3-margin-bottom portfolio-container">
+						<section class="w3-third w3-container w3-mobile w3-margin-bottom portfolio-item">
+							<h2>Formulário de multiplas etapas</h2>
+							
+							<div><amp-img layout="responsive" width="1.70" height="1" src="img/projeto1multstepform.webp" class="w3-round w3-opacity w3-hover-opacity-off w3-img-dim-portfolio w3-grayscale w3-border w3-border-grey w3-hover-border-black" alt="Formulário de multiplas etapas"></div>
+							
+							<a href="https://adriano-wb.github.io/MultiStepFormWithjQuery/" target="_blank" class="w3-button w3-blue w3-block w3-ripple w3-margin-top w3-round"><b>Ver site no ar</b></a>
+							<a href="https://adriano-wb.github.io/Product-Card-Component/" target="_blank" class="w3-button w3-block w3-light-grey w3-ripple w3-margin-top w3-round"><b>Ver repositório</b></a>
+						</section>
+						<section class="w3-third w3-container w3-mobile w3-margin-bottom portfolio-item">
+							<h2>Cadastro de cartões de crédito</h2>
+							
+							<div><amp-img layout="responsive" width="1.70" height="1" src="img/projeto2cardsdetailsform.webp" class="w3-round w3-opacity w3-hover-opacity-off w3-img-dim-portfolio w3-grayscale w3-border w3-border-grey w3-hover-border-black" alt="Formulário detalhado para cadastro de cartões de crédito"></div>
+							
+							<a href="https://adriano-wb.github.io/interactive-card-details-form-main/" target="_blank" class="w3-button w3-blue w3-block w3-ripple w3-margin-top w3-round"><b>Ver site no ar</b></a>
+							<a href="https://adriano-wb.github.io/Product-Card-Component/" target="_blank" class="w3-button w3-block w3-light-grey w3-ripple w3-margin-top w3-round"><b>Ver repositório</b></a>
+						</section>
+						<section class="w3-third w3-container w3-mobile w3-margin-bottom portfolio-item">
+							<h2>Protótipo de E-commerce</h2>
+							
+							<div><amp-img layout="responsive" width="1.70" height="1" src="img/projeto3ecommerce.webp" class="w3-round w3-opacity w3-hover-opacity-off w3-img-dim-portfolio w3-grayscale w3-border w3-border-grey w3-hover-border-black" alt="E-commerce para compra de produto"></div>
+							
+							<a href="https://adriano-wb.github.io/ecommerce-product-page-main/" target="_blank" class="w3-button w3-blue w3-block w3-ripple w3-margin-top w3-round"><b>Ver site no ar</b></a>
+							<a href="https://adriano-wb.github.io/Product-Card-Component/" target="_blank" class="w3-button w3-block w3-light-grey w3-ripple w3-margin-top w3-round"><b>Ver repositório</b></a>
+						</section>
+					</article>
+					
+					<article class="w3-row w3-margin-bottom portfolio-container">
+						<section class="w3-third w3-container w3-mobile w3-margin-bottom portfolio-item">
+							<h2>Protótipo de página principal</h2>
+							
+							<div><amp-img layout="responsive" width="1.70" height="1" src="img/projeto4mainhomepage.webp" class="w3-round w3-opacity w3-hover-opacity-off w3-img-dim-portfolio w3-grayscale w3-border w3-border-grey w3-hover-border-black" alt="Protótipo de página inicial"></div>
+							
+							<a href="https://adriano-wb.github.io/news-homepage-main/" target="_blank" class="w3-button w3-blue w3-block w3-ripple w3-margin-top w3-round"><b>Ver site no ar</b></a>
+							<a href="https://adriano-wb.github.io/Product-Card-Component/" target="_blank" class="w3-button w3-block w3-light-grey w3-ripple w3-margin-top w3-round"><b>Ver repositório</b></a>
+						</section>
+						<section class="w3-third w3-container w3-mobile w3-margin-bottom portfolio-item">
+							<h2>Componente de estilo cartão</h2>
+							
+							<div><amp-img layout="responsive" width="1.70" height="1" src="img/projeto5cardcomponent.webp" class="w3-round w3-opacity w3-hover-opacity-off w3-img-dim-portfolio w3-grayscale w3-border w3-border-grey w3-hover-border-black"></div>
+							
+							<a href="https://adriano-wb.github.io/card-component/" target="_blank" class="w3-button w3-blue w3-block w3-ripple w3-margin-top w3-round"><b>Ver site no ar</b></a>
+							<a href="https://adriano-wb.github.io/Product-Card-Component/" target="_blank" class="w3-button w3-block w3-light-grey w3-ripple w3-margin-top w3-round"><b>Ver repositório</b></a>
+						</section>
+						<section class="w3-third w3-container w3-mobile portfolio-item">
+							<h2>Protótipo de E-commerce</h2>
+							
+							<div><amp-img layout="responsive" width="1.70" height="1" src="img/projeto6ecommerce2.webp" class="w3-round w3-opacity w3-hover-opacity-off w3-img-dim-portfolio w3-grayscale w3-border w3-border-grey w3-hover-border-black" alt="E-commerce para compra de produto"></div>
+							
+							<a href="https://adriano-wb.github.io/Product-Card-Component/" target="_blank" class="w3-button w3-blue w3-block w3-ripple w3-margin-top w3-round"><b>Ver site no ar</b></a>
+							<a href="https://adriano-wb.github.io/Product-Card-Component/" target="_blank" class="w3-button w3-block w3-light-grey w3-ripple w3-margin-top w3-round"><b>Ver repositório</b></a>
+						</section>
+					</article>
+					
+					<!-- Meios para acessar meu GitHub -->
+					<section class="w3-container">
+						<p>Acesse o repositório do GitHub desta página:</p>
+						
+						<a href="https://github.com/adriano-wb/PortfolioAdrianoWb" target="_blank" class="w3-button w3-light-grey w3-ripple w3-round"><b>GitHub Repositório</b></a> <span class="w3-wide w3-large w3-margin-left">OU</span>
+						
+						<p>Acesse o meu perfil do GitHub com alguns destes projetos:</p>
+						
+						<a href="https://github.com/adriano-wb" target="_blank" class="w3-button w3-light-grey w3-ripple w3-round w3-margin-bottom"><b>GitHub Perfil</b></a>
+					</section>
+				</div>
+			</section>
+			<!-------------------------------- FINAL PORTFÓLIO TERCEIRA PARTE ------------------------->
+			
+			<!-- Terceiro parallax -->
+			<div class="parallax w3-theme-l5">
+				<div class="w3-container w3-parallax3" id="para3"></div>
+			</div>
+			<!-- Final terceiro parallax -->
+			
+			<!------------------------ PARTE FINAL CONTATO ------------------------------>
+			<section id="contato" class="w3-container w3-theme-l5 w3-padding-100">
+				<div class="w3-padding w3-container-center">
+				
+					<!-- Informações número, email, redes-sociais -->
+					<h2 class="w3-center w3-xxlarge">Opções de contato</h2>
+					<p><b>Telefone</b>: &#40;11&#41; 94562-3018</p>
+					<p><b>E-mail</b>: adriano_jose@aol.com</p>
+					<p><b>Redes Sociais</b>: <a href="https://wa.me/11945623018" style="margin-right:5px" aria-label="Acessar meu WhatsApp" class="w3-hover-text-green" target="_blank"><i class="fa-brands fa-whatsapp w3-xlarge"></i></a> <a href="https://www.facebook.com/profile.php?id=100030795228566" style="margin-right:5px" aria-label="Acessar meu Facebook" class="w3-hover-text-blue" target="_blank"><i class="fa-brands fa-facebook w3-xlarge"></i></a> <a href="https://t.me/adrianojosep" style="margin-right:5px" aria-label="Acessar meu Telegram" class="w3-hover-text-blue" target="_blank"><i class="fa-brands fa-telegram w3-xlarge"></i></a> <a href="https://www.linkedin.com/in/adriano-josé-0348951b3/" class="w3-hover-text-blue" aria-label="Acessar meu LinkedIn" target="_blank"><i class="fa-brands fa-linkedin w3-xlarge"></i></a></p>
+					<p><b>Localização</b>: São Paulo, SP. Obs. Atendo a todas as regiões</p>
+					<br>
+					<!-- Contato direto via e-mail -->
+					<div class="w3-container w3-theme-l1 w3-round-large w3-border w3-border-light-gray w3-padding-large">
+						<h2 class="w3-center">Entrar em contato</h2>
+						<form action="https://formspree.io/f/mvonjjqp" method="POST">
+							<p>
+								<label for="nome" style="display:inline-block;margin-bottom:3px"><b>Nome</b></label>
+								<input class="w3-input w3-border-bottom w3-border-grey w3-padding w3-sand w3-light-grey" id="nome" placeholder="Insira seu nome" autocomplete="name" type="text" name="nome" required>
+							</p>
+							<p>
+								<label for="email" style="display:inline-block;margin-bottom:3px"><b>Email</b></label>
+								<input class="w3-input w3-border-bottom w3-border-grey w3-padding w3-sand w3-light-grey" id="email" placeholder="Insira seu e-mail" autocomplete="email" type="email" name="email" required>
+							</p>
+							<p>
+								<label for="tel" style="display:inline-block;margin-bottom:3px"><b>Telefone</b></label>
+								<input class="w3-input w3-border-bottom w3-border-grey w3-padding w3-sand w3-light-grey" id="tel" autocomplete="tel" placeholder="Insira seu número" type="text" name="telefone" required>
+							</p>
+							<p>
+								<label for="msg" style="display:inline-block;margin-bottom:3px"><b>Mensagem</b></label>
+								<textarea class="w3-input w3-border-bottom w3-border-grey w3-padding w3-sand w3-light-grey" style="height:110px;resize:vertical"id="msg" name="mensagem" maxlength="235" placeholder="Insira qualquer mensagem" required></textarea>
+							</p>
+							<p>
+								<button class="w3-button w3-blue w3-round" type="submit">Enviar <i class="fa-solid fa-paper-plane"></i></button>
+								<button class="w3-button w3-blue w3-round" type="reset">Limpar <i class="fa-solid fa-broom"></i></button>
+							</p>
+						</form>
+					</div>
+				</div>
+			</section>
+			<!--------------------------- FIM CONTATO ------------------------------------>
+			
+			<!-- RODAPÉ -->
+			<footer class="w3-container w3-center w3-black">
+				<p class="w3-small">&copy; Todos os Direitos Reservados - Adriano_wb</p>
+			</footer>
+			<!-- FIM RODAPÉ -->
+		</main>
+		
+		<!-- jQuery versão 3.7.0 -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+		<script src="script/menu-app.js" type="module"></script>
+	</body>
+</html>
