@@ -2,7 +2,7 @@
 
 /* Especificar que isso só sirva para leitores de tela */
 .sr-only {
-	position: absolute;
+  position: absolute;
   width: 1px;
   height: 1px;
   margin: -1px;
@@ -287,7 +287,6 @@ button {
 	/* Sobre - conhecimentos */
 	.conhecimentos {
 		flex-direction: row;
-		justify-content: center;
+		justify-content: space-around;
 	}
 }
-
