@@ -286,6 +286,7 @@ button {
 	.menu__item:hover:not(.menu__item--active):not(.menu__item--button) {
 		background-color: #000;
 		color: #FFF;
+		transition: background-color 0.2s;
 	}
 
 	.capa {
