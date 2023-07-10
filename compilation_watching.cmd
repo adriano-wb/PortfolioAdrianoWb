@@ -1,1 +1,0 @@
-tsc menu-app.ts --outDir script --target es2022 --watch
