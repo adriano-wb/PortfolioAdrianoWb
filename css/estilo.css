@@ -19,22 +19,23 @@
 
 /* Largura da barra de rolagem */
 ::-webkit-scrollbar {
-	width: 10px;
+	width: 15px;
 }
 
 /* Cor de fundo da barra de rolagem */
 ::-webkit-scrollbar-track {
-	background-color: #FFF;
+	background-color: #333;
 }
 
 /* Cor do indicador da barra de rolagem */
 ::-webkit-scrollbar-thumb {
-	background-color: #000;
+	border-radius: 3px;
+	background-color: #FFF;
 }
 
 /* Efeito de hover na barra de rolagem */
 ::-webkit-scrollbar-thumb:hover {
-	background-color: #555;
+	background-color: #AAA;
 }
 
 
@@ -286,6 +287,7 @@ button {
 	.menu__item:hover:not(.menu__item--active):not(.menu__item--button) {
 		background-color: #000;
 		color: #FFF;
+		transition: background-color 0.2s;
 	}
 
 	.capa {
