@@ -224,9 +224,9 @@
 					<section>
 						<h2 class="w3-center">Formulário de contato</h2>
 						<form action="https://formspree.io/f/mvonjjqp" method="POST">
-							<label><input type="text" class="w3-input w3-border w3-round" placeholder="Insira seu nome"></label>
-							<label><input type="text" class="w3-input w3-border w3-round w3-margin-top" placeholder="Insira seu e-mail"></label>
-							<textarea class="w3-input w3-border w3-round w3-margin-top" placeholder="Insira alguma mensagem" rows="4" size="110" style="resize:vertical"></textarea>
+							<label><input type="text" name="nome" class="w3-input w3-border w3-round" placeholder="Insira seu nome" required></label>
+							<label><input type="text" name="email" class="w3-input w3-border w3-round w3-margin-top" placeholder="Insira seu e-mail" required></label>
+							<textarea name="mensagem" class="w3-input w3-border w3-round w3-margin-top" placeholder="Insira alguma mensagem" rows="4" size="110" style="resize:vertical" required></textarea>
 							<input type="submit" value="Enviar" class="w3-button w3-block w3-margin-top w3-teal w3-round">
 						</form>
 					</section>
