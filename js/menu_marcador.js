@@ -28,7 +28,7 @@ export default function menuMarcador() {
 
    // Se a página estiver na seção "Sobre"
    // e um pouco menos de 50px de altura
-   if ($(window).scrollTop() >= (secao01Altura + parallax01Altura)) {
+   if ($(window).scrollTop() >= (secao01Altura + parallax01Altura - 150)) {
       // Remover classe .w3-white de todos os links do menu
       removeClasseTeal();
 
@@ -43,7 +43,7 @@ export default function menuMarcador() {
       secao01Altura +
       parallax01Altura +
       secao02Altura +
-      parallax02Altura - 50)) {
+      parallax02Altura - 150)) {
       // Remover classe .w3-white de todos os links do menu
       removeClasseTeal();
 
