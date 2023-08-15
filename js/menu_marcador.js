@@ -10,7 +10,7 @@ $(() => {
    // Função para remover classe .w3-white do menu de navegação
    const removeClasseTeal = () => $(".w3-links-js").removeClass("w3-white");
 
-   export default function menuMarcador() {
+   function menuMarcador() {
       // Remover classe .w3-white de todos os links do menu
       removeClasseTeal();
 
@@ -71,3 +71,5 @@ $(() => {
       }
    }
 })
+
+export default {menuMarcador}
