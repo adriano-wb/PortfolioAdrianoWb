@@ -70,6 +70,6 @@ $(() => {
          $(".w3-menu .w3-links-js").eq(2).addClass("w3-white");
       }
    }
-})
 
-export default {menuMarcador}
+   export default {menuMarcador}
+})
