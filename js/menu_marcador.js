@@ -24,7 +24,7 @@ export default function menuMarcador() {
    }
 
    // Se a página estiver na seção "Portfélio"
-   if ($(window).scrollTop() >= $("#portfolio").offset().top) {
+   if ($(window).scrollTop() >= $("#portfolio").offset().top - 50) {
       // Remover classe .w3-white de todos os links do menu
       removeClasseTeal();
 
@@ -33,7 +33,7 @@ export default function menuMarcador() {
    }
 
    // Se a página estiver na seção "Contato"
-   if ($(window).scrollTop() >= $("#contato").offset().top) {
+   if ($(window).scrollTop() >= $("#contato").offset().top - 50) {
       // Remover classe .w3-white de todos os links do menu
       removeClasseTeal();
       
