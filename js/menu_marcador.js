@@ -10,7 +10,6 @@ export default function menuMarcador() {
       // Remover classe .w3-white de todos os links do menu
       removeClasseTeal();
 
-      // Significa que o usuário está sobre a seção "home"
       // adiciona o marcador apenas ao link do menu que corresponde
       $(".w3-links-js").eq(0).addClass("w3-white");
    }
@@ -20,7 +19,6 @@ export default function menuMarcador() {
       // Remover classe .w3-white de todos os links do menu
       removeClasseTeal();
 
-      // Significa que o usuário está sobre a seção "sobre"
       // adiciona o marcador apenas ao link do menu que corresponde
       $(".w3-menu .w3-links-js").eq(0).addClass("w3-white");
    }
@@ -30,7 +28,6 @@ export default function menuMarcador() {
       // Remover classe .w3-white de todos os links do menu
       removeClasseTeal();
 
-      // Significa que o usuário está sobre a seção "portfólio"
       // adiciona o marcador apenas ao link do menu que corresponde
       $(".w3-menu .w3-links-js").eq(1).addClass("w3-white");
    }
@@ -39,8 +36,7 @@ export default function menuMarcador() {
    if ($(window).scrollTop() >= $("#contato").offset().top) {
       // Remover classe .w3-white de todos os links do menu
       removeClasseTeal();
-
-      // Significa que o usuário está sobre a seção "contato"
+      
       // adiciona o marcador apenas ao link do menu que corresponde
       $(".w3-menu .w3-links-js").eq(2).addClass("w3-white");
    }
