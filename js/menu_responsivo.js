@@ -1,7 +1,18 @@
-export default function menuResponsivo() {
-	const $menu = $(".w3-menu");
-	$menu.fadeToggle('slow');
+const $menu = $(".w3-menu");
+
+export function menuResponsivo() {
+
+	// Abrir e fechar menu responsivo de forma dinâmica
+	$menu.fadeToggle("slow");
+ 
 	$menu.parent()
 		.find(".w3-bar-item")
-		.toggleClass('w3-center');
+		.addClass('w3-center');
+
+	$("#backgroundCloseMenu").toggleClass("w3-show");
+}
+
+export function fecharMenuPeloFundo() {
+	$menu.fadeOut("slow");
+	$(this).removeClass("w3-show");
 }
